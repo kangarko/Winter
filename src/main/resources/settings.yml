@@ -1,0 +1,302 @@
+# !-------------------------------------------------------------------------------------------------!
+#                       Welcome to the main configuration of Winter
+# !-------------------------------------------------------------------------------------------------!
+#
+#    For support and documentation, please visit:
+#    - https://github.com/kangarko/Winter/wiki
+#
+# !-------------------------------------------------------------------------------------------------!
+#
+#    1) COLOR CODES are supported with the '&' character. See
+#       - http://minecraftwiki.net/wiki/Formatting_codes
+#       [!] When you use them, omit the message with " " or ' '.
+#
+#    2) TO HIDE a message, set it to 'none'.
+#
+#    3) For UNICODE CHARACTERS (smileys, symbols, ..), save the file in UTF-8 encoding. See
+#       - https://github.com/kangarko/Winter/wiki/Use-Right-Encoding
+#
+#    4) MATERIAL names list is available at:
+#       - https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+#
+#    PS: The information above applies for all files within the Winter folder.
+#
+# !-------------------------------------------------------------------------------------------------!
+
+# -------------------------------------------------------------------------------------------
+# Feeling generous? Create gift chests around the world to give items away, either
+# for everyone or only for 1-3 players.
+# -------------------------------------------------------------------------------------------
+Gift_Chest:
+
+  # Enable special functionality of signs starting with [Gift] when placed on chests?
+  Enabled: true
+
+  # The first line of the sign placed on the gift chest. Makes the plugin recognize the sign.
+  Title: "&8[&fGift&8]"
+
+  # Allow players to create [Gift] signs without specifying the receiver, allowing everyone
+  # who finds the chest to open it (and take away the items).
+  Public:
+  
+    # Allow gift signs without specified receiver?
+    Allow: true
+
+    # How should the sign look like? We make it look like this after you just place [Gift].
+    # Max three lines because the first is already taken by the Title.
+    Format: |-
+      Click for
+      free gifts!
+
+  Private:
+
+    # How should the sign look like? We make it look like this after you just place [Gift]
+    # and the player name or names on each line.
+    # Max three lines because the first is already taken by the Title.
+    Format: |-
+      {receiver_1}
+      {receiver_2}
+      {receiver_3}
+
+# -------------------------------------------------------------------------------------------
+# Dated chests are special chests only available during a certain period of time.
+# -------------------------------------------------------------------------------------------
+Dated_Chest:
+
+  # Force players to open their chest to SEE what is inside before looting it?
+  # true = players can open chest twice, first for preview, then loot
+  # false = players can only open chest once for loot
+  Preview: true
+
+  # Since [Dated] chests do not have to contain the year, what year should we assume
+  # when you for ex. make a chest from 23.12-25.12 ?
+  #
+  # NOTE: Set this to the old year to make chests work correctly when making they,
+  #       overlap the year like 25.12-03.01.
+  Default_Year: 2020
+
+# -------------------------------------------------------------------------------------------
+# Enable the plugin in the following worlds:
+#
+# Set to '*' to enable everywhere.
+# -------------------------------------------------------------------------------------------
+Worlds:
+  - '*'
+
+# -------------------------------------------------------------------------------------------
+# Control the the weather in your worlds.
+# -------------------------------------------------------------------------------------------
+Weather:
+
+  # Completely disable rain or thunderstorm from happening? Makes option below not work!
+  Disable: false
+
+  # Make the Snow particles (see below) float chaotically during rain or thunderstorm?
+  Snow_Storm: true
+
+# -------------------------------------------------------------------------------------------
+# Winter makes your terrain freeze, and can even make your map look like it's winter
+# all the time!
+# -------------------------------------------------------------------------------------------
+Terrain:
+
+  # Disable melting of the following blocks (material list).
+  Prevent_Melting: [ICE, SNOW_BLOCK, SNOW]
+
+  # Covering your world with snow. Multiple layers are supported!
+  Snow_Generation:
+
+    # Randomly place snow onto blocks around the player.
+    # * YOU NEED TO HAVE THIS ENABLED if you want to MELT your snow *
+    Enabled: true
+
+    # This switches the behaviour completely, so instead of covering map with snow,
+    # we will slowly remove it.
+    #
+    # For example, after Christmas you may want to melt the snow instead.
+    Melt: false
+    
+    # Do not melt snow in naturally snowy biomes or above height 90?
+    Only_Melt_Unnatural_Snow: true
+
+    # Transform water into ice or ice into water (when Melt is enabled)?
+    Freeze_Water: true
+
+    # Shall the snow be placed on farmland, simulating real winter and destroying crops?
+    Destroy_Crops: false
+
+    # Do not freeze water if there is something growing on the neighbor blocks
+    #
+    # Format:
+    # <neighbor blocks> (material names split by ", "): <growing> (material names split by ", ")
+    Freeze_Ignore:
+      "SAND, GRASS, DIRT": "SUGAR_CANE, SUGAR_CANE_BLOCK"
+      "SAND": "CACTUS"
+      "SOIL": "*" # Do not freeze near soil no matter what crops grow on it.
+
+    # How often, in ticks (20 ticks = 1 second) should we look for blocks?
+    Period_Ticks: 40
+
+    # What is the radius near each player where blocks should be covered by snow?
+    # **High values decrease performance** Recommended: 2-5 depending on your hardware.
+    Radius: 3
+
+    # Create multiple layers of snow? See Required_Neighbors_To_Grow for control.
+    Multi_Layer: True
+
+    # How many side blocks (west, east, south or nord) must have the same snow layer level
+    # in order for the snow layer in the centre to grow?
+    # Requires "Multi_Layer" on true
+    Required_Neighbors_To_Grow: 2
+
+    # Dot not place snow on the following blocks (material list, will match if contains):
+    Do_Not_Place_On: [ICE, BARRIER, FENCE, STEP, SLAB, AIR, WATER, LAVA, SIGN, PANE, PLATE, STAIRS, TRAPDOOR]
+
+    # What biomes should we ignore?
+    # List: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/block/Biome.html
+    Ignore_Biomes: []
+
+  # Make your map biomes look like it's full of "cold winter biomes" (makes even desert *cold*)
+  # NO CHANGES ARE DONE TO YOUR MAP, THIS IS ONLY DISGUISED FOR YOUR PLAYERS!
+  #
+  # ProtocolLib and Minecraft 1.11 and newer required.
+  Disguise_Biomes:
+
+    # Disguise biomes for players?
+    Enabled: false
+
+    # To what biome should we disguise them?
+    # List: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/block/Biome.html
+    Biome: ICE_MOUNTAINS
+
+# -------------------------------------------------------------------------------------------
+# Let it snow, Let it snow!
+# -------------------------------------------------------------------------------------------
+Snow:
+
+  # Spawn snow particles, even without rain?
+  Enabled: true
+
+  # How often should we update the particles in ticks (20 ticks = 1 second) ?
+  Period_Ticks: 1
+
+  # Amount of snow particles around each player.
+  Amount: 30
+
+  # How strongly should the particles bounce randomly?
+  # Set to 0.8 for thunderstorm-like experience.
+  Chaos: 0.0
+
+  # Only spawn particles in open arenas?
+  Realistic: true
+
+  # Only spawn particles in snowy biomes (cold, ice, frozen biomes and in high altitudes)
+  Require_Snow_Biomes: false
+  
+  # Ignore vanished players and players in spectator?
+  Ignore_Vanished: true
+
+  # Configure the radious around the player where particles will be spawned.
+  # High values decrease performance.
+  Range:
+
+    # The x-z size (width) of the area where particles are spawned.
+    Horizontal: 15
+
+    # The y size (height) of the area where particles are spawned.
+    Vertical: 10
+
+# -------------------------------------------------------------------------------------------
+# Extra options for the Snowman mob :O
+# -------------------------------------------------------------------------------------------
+Snowman:
+
+  # Make Snowman endure warm biomes like desert?
+  Disable_Melt_Damage: true
+  
+  # Stop Zombies and other monsters attacking Snowman.
+  Prevent_Target: true
+
+  # The killer Snowman is here! Make the snowballs shot by Snowman actually deal damage.
+  Damage:
+
+    # How much damage should we give to the hit entity from a thrown snowball?
+    Snowball: 3.0
+
+  # Should Psycho replace normal snowmen (warning: he hates Christmas and kills players)
+  # EXPERIMENTAL: We need to do some hacky stuff, please do not expect everything to go smooth!
+  Psycho:
+
+    # Should psycho replace newly spawned snowmen?
+    Convert_New: false
+    
+    # Scan chunks on load and replace existing snowmen with our dead snowmen?
+    # THIS CANNOT BE UNDONE ONCE YOU CHANGE YOUR MIND
+    Convert_Existing: false
+
+    # Should the aggresive snowmen have a pumpkin on his head? Defaults to false for a cooler look
+    Pumpkin_Head: false
+    
+    # Should we remove this mob when far away?
+    Despawn: true
+
+  # Watch for entities spawned naturally, and convert them into a passive Snowman instead.
+  Transform:
+
+    # Convert spawned monsters to Snowman occasionally?
+    Enabled: true
+    
+    # Chance from 0 to 100 in percent, to convert monsters below.
+    Chance_Percent: 15
+    
+    # List of monsters that can be transformed into Snowman.
+    # Available: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html
+    Applicable: [ZOMBIE]
+
+# -------------------------------------------------------------------------------------------
+# Aliases are alternative command names which trigger the same command as the main command.
+# Separate them with a comma, e.g: aliases: [winter]
+# * THE FIRST ALIAS IS THE MAIN LABEL, THAT MEANS AT LEAST ONE ALIAS MUST BE SPECIFIED. *
+# -------------------------------------------------------------------------------------------
+Command_Aliases: [winter, wt]
+
+# -------------------------------------------------------------------------------------------
+# You can change the prefix in front of chat or console messages here:
+# -------------------------------------------------------------------------------------------
+Prefix: "&f&lWinter &8//&7"
+
+# -------------------------------------------------------------------------------------------
+# Change the language of the messages in this plugin, or completely customize them.
+# Currently: en (English), it (Italian), es (Spanish) and ru (Russian)
+#
+# To edit the messages, create localization/ folder inside Winter folder and restart.
+# -------------------------------------------------------------------------------------------
+Locale: en
+
+# -------------------------------------------------------------------------------------------
+# Should Winter check for new versions on startup and notify you in-game?
+# -------------------------------------------------------------------------------------------
+Notify_Updates: true
+
+# -------------------------------------------------------------------------------------------
+# Support the developer of this plugin to allow occasional promotional messages ?
+# I promise to keep it low key and only display it once a day at maximum.
+# -------------------------------------------------------------------------------------------
+Notify_Promotions: true
+
+# -------------------------------------------------------------------------------------------
+# Time of some plugin's operations is measured. Print a message to the console if they take
+# over the specified amount of time in milliseconds. Set to -1 to disable.
+# -------------------------------------------------------------------------------------------
+Log_Lag_Over_Milis: 100
+
+# -------------------------------------------------------------------------------------------
+# Debugging allows you to understand the plugin. It will print more messages to the console.
+# Specify sections to debug, or ["*"] to print all out.
+# -------------------------------------------------------------------------------------------
+Debug: []
+
+# -------------------------------------------------------------------------------------------
+# Internal configuration number, do not touch :)
+# -------------------------------------------------------------------------------------------
+Version: 1

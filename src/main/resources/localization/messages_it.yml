@@ -1,0 +1,109 @@
+# !-----------------------------------------------------------------------------------------!
+#
+#                              Welcome to the localization file
+#
+# -------------------------------------------------------------------------------------------
+#
+#  This file contains most of the visual messages and notification player receives
+#  while interacting with this plugin. Simply edit them as you like and apply changes
+#  by restarting the server or reloading the plugin.
+#
+#  To not display a message, set it to 'none'
+#
+#  Messages supports variables in brackets {} and color codes with & character
+# !-----------------------------------------------------------------------------------------!
+
+# -------------------------------------------------------------------------------------------
+# Messages related to Gift Chests
+# -------------------------------------------------------------------------------------------
+Chest:
+  Lacks_Chest: "&cPiazza il cartello {sign} su una cassa!"
+  Lacks_Players: "&cSi prega di specificare quali giocatori dovrebbero ricevere questo regalo, su ogni linea."
+  Invalid_Format: "&cIl cartello ha un formato invalido! Specifica {format}."
+  Create_Success: "&6Cartello Winter piazzato con successo."
+  Open:
+    Own: "&6Browsing own Winter chest content ..."
+    Public: "&6&lHeylà, &6goditi questa cassa regalo! :)"
+    Private: "&6Questa è una cassa regalo, goditela! :)"
+    Admin: "&2Ora stai visualizzando il contenuto di una cassa regalo bloccata."
+  Expand:
+    Own: "&2Hai appena espanso una cassa regalo bloccata."
+  Break:
+    Own: "&cHai rotto (una parte di) una tua cassa regalo."
+    Admin: "&cHai rotto una (parte di una) cassa regalo pubblica."
+    Own_Sign: "&cHai rotto il cartello di una tua cassa regalo."
+    Admin_Sign: "&cHai rotto il cartello di una cassa regalo."
+  Timed:
+    Exceeded_Limit: "Questa cassa può essere saccheggiata {limit} volta(e)!"
+    Not_Ready: "La cassa sarà pronta tra {time}."
+  Dated:
+    Exceeded_Limit: "Hai già aperto questa cassa!"
+    Not_Ready: "Questo baule è accessibile solo {accessibility}."
+  Format:
+    Gift: "i nomi dei giocatori su ciascuna riga separatamente"
+    Dated: "la data (24.12) sulla prima linea, e se vuoi data e ora (17:00-20:00)"
+    Timed: "il tempo (come 24h o 40m o 10s) sulla prima linea, e se vuoi un massimo di giocatori per volta"
+  Illegal:
+    Place: "&4&lHey, &4non puoi piazzare cose su un regalo Winter!"
+    Break: "&4&lHey, &4non puoi rompere questa cassa regalo :)"
+    Break_Sign: "&4&lHey, &4non puoi rompere il cartello di questa cassa regalo :)"
+    Expand: "&4&lHey, &4non puoi espandere questa cassa regalo :)"
+    Access: "&4&lHey, &4questa cassa regalo non è per te :)"
+    Inventory_Click: "&cNon puoi manipolare gli oggetti nella preview!"
+
+# -------------------------------------------------------------------------------------------
+# The fancy messages having the full border around
+# -------------------------------------------------------------------------------------------
+Boxed:
+  Border_Color: DARK_GRAY
+  Chest_Preview: |-
+    <center>&f&lWinter
+    &r
+    <center>&7Anteprima cassa regalo! Aprilo nuovamente per spacchettarlo. Ricorda, puoi aprire questa cassa una volta sola!
+  Chest_Open: |-
+    <center>&f&lWinter
+    &r
+    <center>&7Aprendo una cassa regalo...
+
+# -------------------------------------------------------------------------------------------
+# Commands-related messages.
+# -------------------------------------------------------------------------------------------
+Commands:
+  No_Console: "&cQuesto comando può essere usato solo dai giocatori"
+  Reload_Success: "{plugin_name} {plugin_version} è stato ricaricato."
+  Reload_Fail: "&4Ops, &creload fallito! Guarda la console per più informazioni. Errore: {error}"
+  Snow_Enabled: "&fHai attivato le particelle di neve."
+  Snow_Disabled: "&cHai disabilitato le particelle di neve."
+
+# -------------------------------------------------------------------------------------------
+# Words that are changed depending of the context.
+# - In English, only the singular and plural forms is available.
+# - In flectic languages (e.g. Slovak), you may specify three cases: sekunda, sekundy, sekund
+# -------------------------------------------------------------------------------------------
+Cases:
+  Player: giocatore, giocatori
+  Level: livello, livelli
+  Hour: ora, ore
+  Minute: minuto, minuti
+  Second: secondo, secondi
+  Life: vita, vite
+
+# -------------------------------------------------------------------------------------------
+# Various short strings used globally across the plugin.
+# -------------------------------------------------------------------------------------------
+Parts:
+  "On": "su"
+  "Between": "tra"
+  "And": "e"
+  "At": "a"
+
+No_Permission: "&cPermessi insufficienti ({permission})."
+
+Update:
+  Available: |-
+    &2Una nuova versione di &3{plugin_name}&2 è disponibile.
+    &2Versione attuale: &f{current}&2; Nuova versione: &f{new}
+    &2URL: &7https://www.spigotmc.org/resources/{resource_id}/.
+
+# Internal version number. Do not change!
+Version: 1

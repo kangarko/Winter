@@ -1,0 +1,109 @@
+# !-----------------------------------------------------------------------------------------!
+#
+#                              Bienvenido al archivo de localización
+#
+# -------------------------------------------------------------------------------------------
+#
+#  Este archivo contiene la mayoría de los mensajes visuales y notificaciones que recibe el jugador.
+#  mientras interactúas con este plugin. Simplemente edítalos como quieras y aplica los cambios.
+#  reiniciando el servidor o volviendo a cargar el complemento.
+#
+#  Para no mostrar un mensaje, configúrelo en 'none'
+#
+#  Messages admite variables entre paréntesis {} y códigos de color con & carácter
+# !-----------------------------------------------------------------------------------------!
+
+# -------------------------------------------------------------------------------------------
+# Mensajes relacionados con cofres de regalo
+# -------------------------------------------------------------------------------------------
+Chest:
+  Lacks_Chest: "&cColoqué el letrero {sign} en un cofre!"
+  Lacks_Players: "&cPor favor, especifique qué jugadores deben recibir este regalo, en cada línea."
+  Invalid_Format: "&cEl letrero tiene un formato inválido! Especificar {format}."
+  Create_Success: "&6Colocó con éxito un nuevo letrero de invierno."
+  Open:
+    Own: "&6Navegación propia del contenido del cofre de invierno. ..."
+    Public: "&6&lAquí tienes, &6disfruta de este cofre de regalos gratis! :)"
+    Private: "&6Este cofre de regalos es para ti, disfrútalo! :)"
+    Admin: "&2Ahora estás viendo el contenido de un cofre de regalos bloqueado."
+  Expand:
+    Own: "&2Acabas de expandir un cofre de regalos cerrado."
+  Break:
+    Own: "&cUsted acaba de romper (una parte de) su propio cofre de regalos."
+    Admin: "&cAcaba de romper un (parte de) un cofre de regalos público."
+    Own_Sign: "&cAcabas de romper tu propio letrero de regalo."
+    Admin_Sign: "&cUsted acaba de romper un letrero de Caja de regalo."
+  Timed:
+    Exceeded_Limit: "Este cofre solo puede ser saqueado {límite} veces!"
+    Not_Ready: "El cofre estará listo en {time}."
+  Dated:
+    Exceeded_Limit: "Ya has abierto este cofre.!"
+    Not_Ready: "Este cofre solo es accesible {accessibility}."
+  Format:
+    Gift: "nombres de jugadores en cada línea por separado"
+    Dated: "la fecha (24.12) en la primera línea, y opcionalmente la hora en la segunda (17: 00-20: 00)"
+    Timed: "el tiempo (como 24h o 40m o 10s) en la primera línea, y opcionalmente la cantidad máxima de usos por jugador en la segunda línea"
+  Illegal:
+    Place: "&4&lOye, &4¡No puedes colocar cosas en un cofre de invierno!"
+    Break: "&4&lOye, &4no puedes destruir este cofre de regalos :)"
+    Break_Sign: "&4&lOye, &4No puedes destruir este signo de cofre de regalos. :)"
+    Expand: "&4&lHey, &4No puedes expandir este cofre de regalos. :)"
+    Access: "&4&lHey, &4este cofre de regalos no es para ti :)"
+    Inventory_Click: "&cNo puede manipular elementos en esta vista previa!"
+
+# -------------------------------------------------------------------------------------------
+# Los mensajes de fantasía que tienen el borde completo alrededor
+# -------------------------------------------------------------------------------------------
+Boxed:
+  Border_Color: DARK_GRAY
+  Chest_Preview: |-
+    <center>&f&lInvierno
+    &r
+    <center>&7Vista previa de un cofre de regalo! Ábrelo de nuevo para saquearlo. Recuerda, solo puedes abrir este cofre una vez!
+  Chest_Open: |-
+    <center>&f&lInvierno
+    &r
+    <center>&7Abriendo un cofre de regalos...
+
+# -------------------------------------------------------------------------------------------
+# Mensajes relacionados con los comandos.
+# -------------------------------------------------------------------------------------------
+Commands:
+  No_Console: "&cSolo puedes usar este comando como jugador."
+  Reload_Success: "{plugin_name} {plugin_version} ha sido recargado."
+  Reload_Fail: "&4Oups, &crecarga fallida! Vea la consola para más información. Error: {error}"
+  Snow_Enabled: "&fAhora ves partículas de nieve."
+  Snow_Disabled: "&cYa no ves partículas de nieve."
+
+# -------------------------------------------------------------------------------------------
+# Palabras que se cambian según el contexto.
+# - En inglés, solo están disponibles las formas singular y plural.
+# - En idiomas flécticos (por ejemplo, eslovaco), puede especificar tres casos: sekunda, sekundy, sekund
+# -------------------------------------------------------------------------------------------
+Cases:
+  Player: jugador, jugadores
+  Level: nivel, niveles
+  Hour: hora, horas
+  Minute: minuto, minutos
+  Second: segundo, segundos
+  Life: vida, vidas
+
+# -------------------------------------------------------------------------------------------
+# Varias cadenas cortas utilizadas globalmente en el complemento.
+# -------------------------------------------------------------------------------------------
+Parts:
+  "On": "Encendido"
+  "Between": "Entre"
+  "And": "y"
+  "At": "de"
+
+No_Permission: "&cPermiso insuficiente ({permission})."
+
+Update:
+  Available: |-
+    &2Una nueva versión de &3${project.artifactId}&2 está disponible.
+    &2Versión actual: &f{current}&2; Nueva versión: &f{new}
+    &2URL: &7https://www.spigotmc.org/resources/{resource_id}/.
+
+# Número de versión interna. No cambies!
+Version: 1

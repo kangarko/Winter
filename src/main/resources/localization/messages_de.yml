@@ -1,0 +1,109 @@
+# !-----------------------------------------------------------------------------------------!
+#
+#                              Welcome to the localization file
+#
+# -------------------------------------------------------------------------------------------
+#
+#  This file contains most of the visual messages and notification player receives
+#  while interacting with this plugin. Simply edit them as you like and apply changes
+#  by restarting the server or reloading the plugin.
+#
+#  To not display a message, set it to 'none'
+#
+#  Messages supports variables in brackets {} and color codes with & character
+# !-----------------------------------------------------------------------------------------!
+
+# -------------------------------------------------------------------------------------------
+# Messages related to Gift Chests
+# -------------------------------------------------------------------------------------------
+Chest:
+  Lacks_Chest: "&cPlatziere das Schild {sign} auf einer Kiste!"
+  Lacks_Players: "&cBitte gebe auf jeder Zeile an, welche Spieler dieses Geschenk erhalten sollen."
+  Invalid_Format: "&cSchild hat ein falsches Format! Spezifiziere {format}."
+  Create_Success: "&6Erfolgreich neues Winter-Schild platziert."
+  Open:
+    Own: "&6Browse eigenen Winter Truheninhalt ..."
+    Public: "&6&lBitte sehr, &6genieße diese Gratis-Geschenktruhe! :)"
+    Private: "&6Diese Geschenktruhe ist für dich, genießen Sie sie! :)"
+    Admin: "&2Sie sehen jetzt den Inhalt einer verschlossenen Geschenktruhe."
+  Expand:
+    Own: "&2Du hast gerade eine verschlossene Geschenktruhe erweitert.."
+  Break:
+    Own: "&cYou just broke (a part of) your own gift chest."
+    Admin: "&cDu hast gerade (einen Teil) deiner eigenen Geschenktruhe zerbrochen."
+    Own_Sign: "&cDu hast gerade dein eigenes Geschenktruhenschild zerbrochen."
+    Admin_Sign: "&cDu hast gerade ein Schild mit einer Geschenktruhe zerbrochen."
+  Timed:
+    Exceeded_Limit: "Diese Truhe kann nur zu bestimmten Zeiten gelootes werden: {limit}"
+    Not_Ready: "Die Truhe wird in Kürze bereit sein."
+  Dated:
+    Exceeded_Limit: "Du hast diese Truhe bereits geöffnet."
+    Not_Ready: "Diese Truhe ist nur zugänglich {accessibility}."
+  Format:
+    Gift: "Spielernamen auf jeder Zeile separat."
+    Dated: "das Datum (24.12) in der ersten Zeile und optional die Uhrzeit in der zweiten Zeile (17:00-20:00)."
+    Timed: "die Zeit (z.B. 24h oder 40m oder 10s) auf der ersten Linie, und optional die maximale Anzahl von Einsätzen pro Spieler auf der zweiten Linie."
+  Illegal:
+    Place: "&4&lHey, &4du kannst diese Dinge nicht auf eine Wintertruhe legen!"
+    Break: "&4&lHey, &4Sie können diese Geschenkkiste nicht zerstören :)"
+    Break_Sign: "&4&lHey, &4Du kannst dieses Geschenktruhenschild nicht zerstören :)"
+    Expand: "&4&lHey, &4Sie können diese Geschenktruhe nicht erweitern :)"
+    Access: "&4&lHey, &4dieser Geschenkkasten ist nicht für dich :)"
+    Inventory_Click: "&cDu kannst diese Vorschau nicht verändern.!"
+
+# -------------------------------------------------------------------------------------------
+# The fancy messages having the full border around
+# -------------------------------------------------------------------------------------------
+Boxed:
+  Border_Color: DARK_GRAY
+  Chest_Preview: |-
+    <center>&f&lWinter
+    &r
+    <center>&7Vorschau auf eine Geschenktruhe! Öffnen Sie sie erneut, um sie zu plündern. Denken Sie daran, dass Sie diese Truhe nur einmal öffnen können.!
+  Chest_Open: |-
+    <center>&f&lWinter
+    &r
+    <center>&7Opening a gift chest...
+
+# -------------------------------------------------------------------------------------------
+# Commands-related messages.
+# -------------------------------------------------------------------------------------------
+Commands:
+  No_Console: "&cDu kannst diesen Befehl nur als Spieler verwenden"
+  Reload_Success: "{plugin_name} {plugin_version} wurde reloaded."
+  Reload_Fail: "&4Oups, &cdas Reloading ist fehlgeschlagen! Siehe die Konsole für mehr Informationen. Error: {error}"
+  Snow_Enabled: "&fDu siehst nun Schneepartikel."
+  Snow_Disabled: "&cDu siehst nun keine Schneepertikel mehr."
+
+# -------------------------------------------------------------------------------------------
+# Words that are changed depending of the context.
+# - In English, only the singular and plural forms is available.
+# - In flectic languages (e.g. Slovak), you may specify three cases: sekunda, sekundy, sekund
+# -------------------------------------------------------------------------------------------
+Cases:
+  Player: Spieler, Spieler
+  Level: Level, Level
+  Hour: Stunde, Stunden
+  Minute: Minute, Minuten
+  Second: Sekunde, Sekunden
+  Life: Leben, Leben
+
+# -------------------------------------------------------------------------------------------
+# Various short strings used globally across the plugin.
+# -------------------------------------------------------------------------------------------
+Parts:
+  "On": "on"
+  "Between": "zwischen"
+  "And": "und"
+  "At": "bei"
+
+No_Permission: "&cUnzureichende Berechtigungen ({permission})."
+
+Update:
+  Available: |-
+    &2Eine neue Version von &3CoreArena&2 wurde veröffentlicht.
+    &2Aktuelle Version: &f{current}&2; Neue version: &f{new}
+    &2URL: &7https://www.spigotmc.org/resources/{resource_id}/.
+
+# Internal version number. Do not change!
+Version: 1

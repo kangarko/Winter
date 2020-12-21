@@ -1,0 +1,109 @@
+# !-----------------------------------------------------------------------------------------!
+#
+#                              Welcome to the localization file
+#
+# -------------------------------------------------------------------------------------------
+#
+#  This file contains most of the visual messages and notification player receives
+#  while interacting with this plugin. Simply edit them as you like and apply changes
+#  by restarting the server or reloading the plugin.
+#
+#  To not display a message, set it to 'none'
+#
+#  Messages supports variables in brackets {} and color codes with & character
+# !-----------------------------------------------------------------------------------------!
+
+# -------------------------------------------------------------------------------------------
+# Messages related to Gift Chests
+# -------------------------------------------------------------------------------------------
+Chest:
+  Lacks_Chest: "&cPlace the {sign} sign on a chest!"
+  Lacks_Players: "&cPlease specify which players should receive this gift, on each line."
+  Invalid_Format: "&cSign has invalid format! Specify {format}."
+  Create_Success: "&6Successfully placed a new Winter sign."
+  Open:
+    Own: "&6Browsing own Winter chest content ..."
+    Public: "&6&lHere you go, &6enjoy this free gift chest! :)"
+    Private: "&6This gift chest is for you, enjoy it! :)"
+    Admin: "&2You are now viewing a locked gift chest's content."
+  Expand:
+    Own: "&2You just expanded a locked gift chest."
+  Break:
+    Own: "&cYou just broke (a part of) your own gift chest."
+    Admin: "&cYou just broke a (part of a) public gift chest."
+    Own_Sign: "&cYou just broke your own gift chest sign."
+    Admin_Sign: "&cYou just broke a gift chest sign."
+  Timed:
+    Exceeded_Limit: "This chest can only be looted {limit} time(s)!"
+    Not_Ready: "Chest will be ready in {time}."
+  Dated:
+    Exceeded_Limit: "You have already opened this chest!"
+    Not_Ready: "This chest is only accessible {accessibility}."
+  Format:
+    Gift: "player names on each line separately"
+    Dated: "the date (24.12) on the first line, and optionally the time on the second (17:00-20:00)"
+    Timed: "the time (like 24h or 40m or 10s) on the first line, and optionally maximum amount of uses per player on the second"
+  Illegal:
+    Place: "&4&lHey, &4you cannot place things on a Winter chest!"
+    Break: "&4&lHey, &4you cannot destroy this gift chest :)"
+    Break_Sign: "&4&lHey, &4you cannot destroy this gift chest sign :)"
+    Expand: "&4&lHey, &4you cannot expand this gift chest :)"
+    Access: "&4&lHey, &4this gift chest is not for you :)"
+    Inventory_Click: "&cYou cannot manipulate items in this preview!"
+
+# -------------------------------------------------------------------------------------------
+# The fancy messages having the full border around
+# -------------------------------------------------------------------------------------------
+Boxed:
+  Border_Color: DARK_GRAY
+  Chest_Preview: |-
+    <center>&f&lWinter
+    &r
+    <center>&7Previewing a gift chest! Open it again to loot it. Remember, you can only open this chest once!
+  Chest_Open: |-
+    <center>&f&lWinter
+    &r
+    <center>&7Opening a gift chest...
+
+# -------------------------------------------------------------------------------------------
+# Commands-related messages.
+# -------------------------------------------------------------------------------------------
+Commands:
+  No_Console: "&cYou may only use this command as a player"
+  Reload_Success: "{plugin_name} {plugin_version} has been reloaded."
+  Reload_Fail: "&4Oups, &creloading failed! See the console for more information. Error: {error}"
+  Snow_Enabled: "&fYou now see snowing particles."
+  Snow_Disabled: "&cYou no longer see snowing particles."
+
+# -------------------------------------------------------------------------------------------
+# Words that are changed depending of the context.
+# - In English, only the singular and plural forms is available.
+# - In flectic languages (e.g. Slovak), you may specify three cases: sekunda, sekundy, sekund
+# -------------------------------------------------------------------------------------------
+Cases:
+  Player: player, players
+  Level: level, levels
+  Hour: hour, hours
+  Minute: minute, minutes
+  Second: second, seconds
+  Life: life, lifes
+
+# -------------------------------------------------------------------------------------------
+# Various short strings used globally across the plugin.
+# -------------------------------------------------------------------------------------------
+Parts:
+  "On": "on"
+  "Between": "between"
+  "And": "and"
+  "At": "at"
+
+No_Permission: "&cInsufficient permission ({permission})."
+
+Update:
+  Available: |-
+    &2A new version of &3{plugin_name}&2 is available.
+    &2Current version: &f{current}&2; New version: &f{new}
+    &2URL: &7https://www.spigotmc.org/resources/{resource_id}/.
+
+# Internal version number. Do not change!
+Version: 1
