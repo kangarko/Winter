@@ -1,5 +1,6 @@
 package org.mineacademy.winter.psycho;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
@@ -18,7 +19,7 @@ public class PsychoMob implements Listener {
 	public static final boolean IS_COMPATIBLE;
 
 	static {
-		IS_COMPATIBLE = MinecraftVersion.equals(COMP_VERSION) && MinecraftVersion.getServerVersion().endsWith("R3");
+		IS_COMPATIBLE = MinecraftVersion.equals(COMP_VERSION) && MinecraftVersion.getServerVersion().endsWith("R3") && !Bukkit.getName().contains("Cauldron");
 	}
 
 	public static final void spawn(Location loc) {

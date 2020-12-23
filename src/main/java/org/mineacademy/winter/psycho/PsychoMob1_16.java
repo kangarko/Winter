@@ -45,7 +45,9 @@ public class PsychoMob1_16 extends EntitySnowman {
 		final double d3 = d0 - entitysnowball.locY();
 		final double d4 = entityliving.locZ() - this.locZ();
 		final float f2 = MathHelper.sqrt(d2 * d2 + d4 * d4) * 0.2f;
+
 		entitysnowball.shoot(d2, d3 + f2, d4, 1.6f, 12.0f);
+
 		this.playSound(SoundEffects.ENTITY_SHULKER_SHOOT, 1.0f, 1.0f / (this.getRandom().nextFloat() * 0.4f + 0.8f));
 		this.world.addEntity(entitysnowball);
 	}
