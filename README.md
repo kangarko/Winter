@@ -5,6 +5,8 @@
   </a>
 </p>
 
+## Announcement: This plugin is now free of charge, you can download it in the "Releases" tab. See https://mineacademy.org/plugins for a list of all plugins we've open sourced.
+
 # Winter
 Winter is a premium-grade plugin for Spigot, transforming your server into snowy wonderlands (even in summer).
 
