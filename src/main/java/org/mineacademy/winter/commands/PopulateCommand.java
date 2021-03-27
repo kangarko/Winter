@@ -34,22 +34,7 @@ public class PopulateCommand extends SimpleSubCommand {
 	@Override
 	protected final void onCommand() {
 		checkBoolean(!(sender instanceof Player), "&cThis command requires execution from the console.");
-
-		checkBoolean(MinecraftVersion.newerThan(V.v1_7) && MinecraftVersion.olderThan(V.v1_17),
-				"Only MC 1.8-1.16.x are supported (for safety). Please notify the developer to test out if the new MC version is safe to use.");
-
-		{
-			final String mcVer = Bukkit.getBukkitVersion();
-
-			if (mcVer.startsWith("1.13") && !mcVer.startsWith("1.13."))
-				returnTell("Minecraft 1.13 is no longer supported, update to 1.13.2 or newer.");
-
-			else if (mcVer.startsWith("1.14") && !mcVer.startsWith("1.14."))
-				returnTell("Minecraft 1.14 is no longer supported, update to 1.14.2 or newer.");
-
-			else if (mcVer.startsWith("1.15") && !mcVer.startsWith("1.15."))
-				returnTell("Minecraft 1.15 is no longer supported, update to 1.15.2 or newer.");
-		}
+		checkBoolean(MinecraftVersion.newerThan(V.v1_7), "Only MC 1.8.8 and up are supported (for safety). Please notify the developer to test out if the new MC version is safe to use.");
 
 		final String param = args[0].toLowerCase();
 		final String worldRaw = args[1];
