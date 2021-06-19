@@ -5,7 +5,7 @@
 
 	<groupId>org.mineacademy</groupId>
 	<artifactId>Winter</artifactId>
-	<version>2.5.6</version>
+	<version>2.5.7</version>
 	<packaging>jar</packaging>
 
 	<properties>
@@ -15,13 +15,22 @@
 	</properties>
 
 	<dependencies>
+		
 		<!-- Paper is required for Psycho NMS access -->
 		<dependency>
 			<groupId>org.mineacademy.server</groupId>
-			<artifactId>Paper</artifactId>
-			<version>Paper-1.16.4-SNAPSHOT-311</version>
+			<artifactId>Spigot-1.16</artifactId>
+			<version>1</version>
 			<scope>system</scope>
-			<systemPath>${basedir}/library/Paper-1.16.4-SNAPSHOT-311.jar</systemPath>
+			<systemPath>/Users/kangarko/Test Servers/1.16/cache/patched_1.16.5.jar</systemPath>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.mineacademy.server</groupId>
+			<artifactId>Spigot-1.17</artifactId>
+			<version>1</version>
+			<scope>system</scope>
+			<systemPath>/Users/kangarko/Test Servers/1.17/paperclip.jar</systemPath>
 		</dependency>
 
 		<dependency>

@@ -10,7 +10,6 @@ import org.mineacademy.fo.Common;
 import org.mineacademy.fo.MinecraftVersion;
 import org.mineacademy.fo.MinecraftVersion.V;
 import org.mineacademy.fo.model.HookManager;
-import org.mineacademy.fo.model.SpigotUpdater;
 import org.mineacademy.fo.plugin.SimplePlugin;
 import org.mineacademy.fo.settings.YamlStaticConfig;
 import org.mineacademy.winter.commands.WinterCommandGroup;
@@ -127,10 +126,10 @@ public class Winter extends SimplePlugin {
 		}
 	}
 
-	@Override
+	/*@Override
 	public SpigotUpdater getUpdateCheck() {
 		return new SpigotUpdater(49646);
-	}
+	}*/
 
 	@Override
 	public final List<Class<? extends YamlStaticConfig>> getSettings() {

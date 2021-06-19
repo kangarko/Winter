@@ -11,19 +11,27 @@ import org.bukkit.event.world.ChunkLoadEvent;
 import org.mineacademy.fo.Common;
 import org.mineacademy.fo.MinecraftVersion;
 import org.mineacademy.fo.MinecraftVersion.V;
+import org.mineacademy.fo.exception.FoException;
 import org.mineacademy.winter.settings.Settings;
 
 public class PsychoMob implements Listener {
 
-	public static final V COMP_VERSION = V.v1_16;
 	public static final boolean IS_COMPATIBLE;
+	public static final String COMPATIBLE = "1.16, 1.17";
 
 	static {
-		IS_COMPATIBLE = MinecraftVersion.equals(COMP_VERSION) && MinecraftVersion.getServerVersion().endsWith("R3") && !Bukkit.getName().contains("Cauldron");
+		IS_COMPATIBLE = (MinecraftVersion.equals(V.v1_16) || MinecraftVersion.equals(V.v1_17)) && !Bukkit.getName().contains("Cauldron");
 	}
 
 	public static final void spawn(Location loc) {
-		new PsychoMob1_16(loc);
+		if (MinecraftVersion.equals(V.v1_17))
+			new PsychoMob1_17(loc);
+
+		else if (MinecraftVersion.equals(V.v1_16))
+			new PsychoMob1_16(loc);
+
+		else
+			throw new FoException("Psycho mob is unsupported for MC version " + MinecraftVersion.getServerVersion());
 	}
 
 	@EventHandler

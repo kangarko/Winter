@@ -102,7 +102,7 @@ public final class Settings extends SimpleSettings {
 				Common.logFramed(false,
 						"Warning: Your Dated_Chest.Default_Year is " + DEFAULT_YEAR + ".",
 						"You do not need to update it if your chests are overlapping",
-						"from for example 2020 to 2021 (then leave at 2020).");
+						"from for example 2021 to 2022 (then leave at 2021).");
 		}
 	}
 
@@ -267,7 +267,7 @@ public final class Settings extends SimpleSettings {
 				DESPAWN = getBoolean("Despawn");
 
 				if ((CONVERT_EXISTING || CONVERT_NEW) && !PsychoMob.IS_COMPATIBLE)
-					Common.logFramed(false, "Notice: Psycho is not compatible with your MC version. Currently requires: " + PsychoMob.COMP_VERSION);
+					Common.logFramed(false, "Notice: Psycho is not compatible with your MC version. Currently requires: " + PsychoMob.COMPATIBLE);
 			}
 		}
 

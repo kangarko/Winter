@@ -3,7 +3,7 @@ main: ${main.class}
 version: ${project.version}
 author: kangarko
 api-version: 1.13
-softdepend: [AuthMe, BungeeChatAPI, DiscordSRV, Factions, Feudal, Essentials, LegacyFactions, LuckPerms, MVdWPlaceholderAPI, Multiverse-Core, Nicky, PlaceholderAPI, ProtocolLib, SimpleClans, Towny, TownyChat, Vault, WorldEdit]
+softdepend: [AuthMe, BungeeChatAPI, DiscordSRV, Factions, Feudal, Essentials, LegacyFactions, LuckPerms, MVdWPlaceholderAPI, Multiverse-Core, NashornPlus, Nicky, PlaceholderAPI, ProtocolLib, SimpleClans, Towny, TownyChat, Vault, WorldEdit]
 #
 # The commands are built at runtime so you can change them easily within the settings.
 # Do not change anything in here, you will break the plugin and get no support.

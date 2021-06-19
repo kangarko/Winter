@@ -73,7 +73,7 @@ Dated_Chest:
   #
   # NOTE: Set this to the old year to make chests work correctly when making they,
   #       overlap the year like 25.12-03.01.
-  Default_Year: 2020
+  Default_Year: 2021
 
 # -------------------------------------------------------------------------------------------
 # Enable the plugin in the following worlds:

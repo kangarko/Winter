@@ -14,7 +14,7 @@ public final class PsychoCommand extends SimpleSubCommand {
 	@Override
 	protected void onCommand() {
 		checkConsole();
-		checkBoolean(PsychoMob.IS_COMPATIBLE, "Psycho is not available for your Minecraft version. Currently requires MC " + PsychoMob.COMP_VERSION);
+		checkBoolean(PsychoMob.IS_COMPATIBLE, "Psycho is not available for your Minecraft version. Currently requires MC " + PsychoMob.COMPATIBLE);
 
 		try {
 			PsychoMob.spawn(getPlayer().getLocation());
