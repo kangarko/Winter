@@ -32,7 +32,7 @@ public class PsychoMob1_16 extends EntitySnowman {
 			setHasPumpkin(false);
 
 		getBukkitEntity().setMetadata("DeadlySnowman", new FixedMetadataValue(SimplePlugin.getInstance(), true));
-		persistent = Settings.Snowman.Psycho.DESPAWN ? false : true;
+		persistent = !Settings.Snowman.Psycho.DESPAWN;
 
 		((CraftWorld) loc.getWorld()).getHandle().addEntity(this, SpawnReason.CUSTOM);
 	}

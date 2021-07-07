@@ -30,7 +30,7 @@
 			<artifactId>Spigot-1.17</artifactId>
 			<version>1</version>
 			<scope>system</scope>
-			<systemPath>/Users/kangarko/Test Servers/1.17/paperclip.jar</systemPath>
+			<systemPath>/Users/kangarko/Test Servers/1.17/cache/patched_1.17.1.jar</systemPath>
 		</dependency>
 
 		<dependency>

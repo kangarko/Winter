@@ -24,7 +24,7 @@ public class PsychoMob1_17 extends EntitySnowman {
 		super(EntityTypes.aF, ((CraftWorld) loc.getWorld()).getHandle());
 
 		this.setPosition(loc.getX(), loc.getY(), loc.getZ());
-		this.bO.a(1, new PathfinderGoalMeleeAttack(this, 1.0, true));
+		this.bP.a(1, new PathfinderGoalMeleeAttack(this, 1.0, true));
 		this.bP.a(2, new PathfinderGoalNearestAttackableTarget(this, EntityHuman.class, true));
 
 		if (!Settings.Snowman.Psycho.PUMPKIN)
@@ -33,7 +33,7 @@ public class PsychoMob1_17 extends EntitySnowman {
 		getBukkitEntity().setMetadata("DeadlySnowman", new FixedMetadataValue(SimplePlugin.getInstance(), true));
 
 		// Persistent
-		bZ = Settings.Snowman.Psycho.DESPAWN ? false : true;
+		persist = !Settings.Snowman.Psycho.DESPAWN;
 
 		((CraftWorld) loc.getWorld()).getHandle().addEntity(this, SpawnReason.CUSTOM);
 	}
