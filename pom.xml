@@ -22,7 +22,7 @@
 			<artifactId>Spigot-1.16</artifactId>
 			<version>1</version>
 			<scope>system</scope>
-			<systemPath>/Users/kangarko/Test Servers/1.16/cache/patched_1.16.5.jar</systemPath>
+			<systemPath>${project.basedir}/library/patched_1.16.5.jar</systemPath>
 		</dependency>
 		
 		<dependency>
@@ -30,7 +30,7 @@
 			<artifactId>Spigot-1.17</artifactId>
 			<version>1</version>
 			<scope>system</scope>
-			<systemPath>/Users/kangarko/Test Servers/1.17/cache/patched_1.17.1.jar</systemPath>
+			<systemPath>${project.basedir}/library/patched_1.17.1.jar</systemPath>
 		</dependency>
 
 		<dependency>
