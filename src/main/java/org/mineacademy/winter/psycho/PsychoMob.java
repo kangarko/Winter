@@ -49,11 +49,11 @@ public class PsychoMob implements Listener {
 	}
 
 	@EventHandler
-	public void onChunkLoad(ChunkLoadEvent e) {
+	public void onChunkLoad(ChunkLoadEvent event) {
 		if (!Settings.Snowman.Psycho.CONVERT_EXISTING)
 			return;
 
-		for (final Entity en : e.getChunk().getEntities())
+		for (final Entity en : event.getChunk().getEntities())
 			if (en.getType() == EntityType.SNOWMAN) {
 				if (en.hasMetadata("DeadlySnowman"))
 					continue;
