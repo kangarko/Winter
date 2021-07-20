@@ -97,7 +97,7 @@ public class PopulateCommand extends SimpleSubCommand {
 	private static long now = 0;
 
 	private final void launch(boolean melt, World w) {
-		Common.log("1/4 Kicking all players & enabling whitelist ...");
+		Common.log("1/3 Kicking all players & enabling whitelist ...");
 
 		for (final Player player : Remain.getOnlinePlayers())
 			player.kickPlayer("Kicked due to server maintenance");
@@ -106,16 +106,13 @@ public class PopulateCommand extends SimpleSubCommand {
 
 		final WinterRegionCleaner cleaner = new WinterRegionCleaner();
 
-		Common.log("2/4 Running region scan ...");
+		Common.log("2/3 Running region scan ...");
 		now = System.currentTimeMillis();
 		cleaner.launch(melt, w);
 	}
 
 	public static final void finish(World w) {
-		Common.log("3/4 Saving world ...");
-		w.save();
-
-		Common.log("4/4 Disabling whitelist ...");
+		Common.log("3/3 Disabling whitelist ...");
 		Bukkit.setWhitelist(false);
 
 		Common.log(Common.consoleLine());

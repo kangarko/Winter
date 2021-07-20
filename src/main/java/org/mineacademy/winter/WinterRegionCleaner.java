@@ -25,9 +25,9 @@ public class WinterRegionCleaner extends OfflineRegionScanner {
 	}
 
 	@Override
-	protected void onChunkScan(Chunk ch) {
+	protected void onChunkScan(Chunk chunk) {
 
-		for (final Block block : getBlocks(ch)) {
+		for (final Block block : getBlocks(chunk)) {
 			if (Settings.Terrain.SnowGeneration.IGNORE_BIOMES.contains(block.getBiome()))
 				continue;
 
@@ -45,33 +45,26 @@ public class WinterRegionCleaner extends OfflineRegionScanner {
 
 			} else if (!melt && WinterUtil.canPlace(ground))
 				block.setType(Material.SNOW);
+
 			else if (Settings.Terrain.SnowGeneration.FREEZE_WATER)
 				if (melt) {
 					if (ground.getType() == Material.ICE)
 						ground.setType(Material.WATER);
+
 				} else if (ground.getType() == Material.WATER || ground.getType().toString().equals("STATIONARY_WATER"))
 					ground.setType(Material.ICE);
 		}
 	}
 
 	private final List<Block> getBlocks(Chunk chunk) {
-		final List<Block> found = new ArrayList<>();
+		final List<Block> highestChunkNoSnowBlocks = new ArrayList<>();
 
-		final int cx = chunk.getX() << 4;
-		final int cz = chunk.getZ() << 4;
+		for (final Location location : BlockUtil.getXZLocations(chunk)) {
+			location.setY(BlockUtil.findHighestBlockNoSnow(chunk.getWorld(), location.getBlockX(), location.getBlockZ()));
 
-		for (int x = cx; x < cx + 16; x++)
-			for (int z = cz; z < cz + 16; z++) {
-				final double y = BlockUtil.findHighestBlockNoSnow(chunk.getWorld(), x, z);
+			highestChunkNoSnowBlocks.add(location.getBlock());
+		}
 
-				if (y == -1)
-					continue;
-
-				final Location loc = new Location(chunk.getWorld(), x, y, z);
-
-				found.add(loc.getBlock());
-			}
-
-		return found;
+		return highestChunkNoSnowBlocks;
 	}
 }
