@@ -29,14 +29,6 @@ public final class Settings extends SimpleSettings {
 		return 1;
 	}
 
-	/**
-	 * @see org.mineacademy.fo.settings.YamlStaticConfig#saveComments()
-	 */
-	@Override
-	protected boolean saveComments() {
-		return true;
-	}
-
 	@Override
 	protected List<String> getUncommentedSections() {
 		return Arrays.asList("Terrain.Snow_Generation.Freeze_Ignore");
