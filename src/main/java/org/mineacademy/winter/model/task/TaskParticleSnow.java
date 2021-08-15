@@ -133,10 +133,10 @@ public final class TaskParticleSnow extends BukkitRunnable {
 		return -min + (max + min) * Math.random();
 	}
 
-	private void sendParticle(Player pl, Location loc) {
-		final float speed = SnowStorm.has(loc.getWorld()) ? 1F : CHAOS;
+	private void sendParticle(Player player, Location location) {
+		final float speed = SnowStorm.has(location.getWorld()) ? 1F : CHAOS;
 
-		CompParticle.FIREWORKS_SPARK.spawnFor(pl, loc, (double) speed);
+		CompParticle.FIREWORKS_SPARK.spawn(player, location, speed);
 	}
 
 	/**
