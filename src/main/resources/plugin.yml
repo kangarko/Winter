@@ -4,6 +4,8 @@ version: ${project.version}
 author: kangarko
 api-version: 1.13
 softdepend: [AuthMe, BungeeChatAPI, DiscordSRV, Factions, Feudal, Essentials, LegacyFactions, LuckPerms, MVdWPlaceholderAPI, Multiverse-Core, NashornPlus, Nicky, PlaceholderAPI, ProtocolLib, SimpleClans, Towny, TownyChat, Vault, WorldEdit]
+libraries:
+  - org.openjdk.nashorn:nashorn-core:15.3
 #
 # The commands are built at runtime so you can change them easily within the settings.
 # Do not change anything in here, you will break the plugin and get no support.
