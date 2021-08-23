@@ -34,6 +34,14 @@ public class PlayerData extends YamlSectionConfig {
 		return instance;
 	}
 
+	/**
+	 * @see org.mineacademy.fo.settings.YamlConfig#saveComments()
+	 */
+	@Override
+	protected boolean saveComments() {
+		return false;
+	}
+
 	// -----------------------------------------------------------------------------
 
 	public static final class PlayerDataFile implements ConfigSerializable {

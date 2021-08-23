@@ -26,6 +26,14 @@ public class ChestData extends YamlSectionConfig {
 	}
 	// -----------------------------------------------------------------------------
 
+	/**
+	 * @see org.mineacademy.fo.settings.YamlConfig#saveComments()
+	 */
+	@Override
+	protected boolean saveComments() {
+		return false;
+	}
+
 	// Location, UUID
 	private final StrictMap<String, String> signs = new StrictMap<>();
 

@@ -34,6 +34,14 @@ public final class Settings extends SimpleSettings {
 		return Arrays.asList("Terrain.Snow_Generation.Freeze_Ignore");
 	}
 
+	/**
+	 * @see org.mineacademy.fo.settings.YamlConfig#saveComments()
+	 */
+	@Override
+	protected boolean saveComments() {
+		return false;
+	}
+
 	public static final class GiftChest {
 
 		public static Boolean ENABLED;
