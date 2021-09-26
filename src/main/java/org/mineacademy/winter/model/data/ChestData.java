@@ -64,14 +64,12 @@ public class ChestData extends YamlSectionConfig {
 		signs.put(SerializeUtil.serializeLoc(sign.getLocation()), owner.getUniqueId().toString());
 
 		save("Signs", signs);
-		onLoadFinish();
 	}
 
 	public final void removeSign(Sign sign) {
 		signs.remove(SerializeUtil.serializeLoc(sign.getLocation()));
 
 		save("Signs", signs);
-		onLoadFinish();
 	}
 
 	public final OfflinePlayer getOwner(Sign sign) {

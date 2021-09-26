@@ -196,8 +196,6 @@ public class PlayerData extends YamlSectionConfig {
 				return value.serialize();
 			}
 		}));
-
-		onLoadFinish();
 	}
 
 	public final ChestDataCache getWeak(Player owner, Chest chest) {
@@ -219,7 +217,5 @@ public class PlayerData extends YamlSectionConfig {
 
 	private void saveSnowData() {
 		save("Snow_Disabled", Common.convert(snowDisabled.getSource(), UUID::toString));
-
-		onLoadFinish();
 	}
 }
