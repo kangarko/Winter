@@ -15,4 +15,4 @@ Winter is an all-in-one Christmas and Winter solution, transforming your server 
 * Weather and melt control
 * Gift chests and much more!
 
-Check out https://mineacademy.org/winter for more information.
+Get it here: https://www.mc-market.org/resources/21645/
